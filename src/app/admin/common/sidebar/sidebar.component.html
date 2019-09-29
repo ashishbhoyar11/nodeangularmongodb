@@ -1,0 +1,36 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin/dashbord']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+          <i class="mdi mdi-home menu-icon"></i>
+          <span class="menu-title">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+          <i class="mdi mdi-circle-outline menu-icon"></i>
+          <span class="menu-title">Contest</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-basic">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" [routerLink]="['/admin/contest']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Add</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="['/admin/contestList']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">List</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <i class="mdi mdi-circle-outline menu-icon"></i>
+            <span class="menu-title">Friends</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-basic">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" [routerLink]="['/admin/friends']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Friends List</a></li>
+              <li class="nav-item"> <a class="nav-link" [routerLink]="['/admin/friendsContest']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Friends Contest</a></li>
+            </ul>
+          </div>
+        </li>
+    </ul>
+  </nav>

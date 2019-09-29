@@ -1,0 +1,55 @@
+<div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <app-header></app-header>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_sidebar.html -->
+      <app-sidebar></app-sidebar>
+      <!-- partial -->
+      <div class="main-panel">        
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Contest Add</h4>
+                    <form class="forms-sample" [formGroup]="contestForm">
+                      <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Title" [formControl]="contestForm.controls.title">
+                      </div>
+                      <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="4" [formControl]="contestForm.controls.desc"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label>File upload</label>
+                        <input type="file" name="img" class="file-upload-default" (change)="fileEvent($event)" [formControl]="contestForm.controls.img">
+                        <div class="input-group col-xs-12">
+                          <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image" >
+                          <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="datePicker">Date</label>
+                        <input type="datetime-local" class="form-control" id="datePicker" [formControl]="contestForm.controls.date">
+                      </div>
+                      <button type="submit" class="btn btn-primary mr-2" [disabled]='!contestForm.valid' (click)='contactFormAdd()'>Submit</button>
+                      <button class="btn btn-light">Cancel</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <app-footer></app-footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>

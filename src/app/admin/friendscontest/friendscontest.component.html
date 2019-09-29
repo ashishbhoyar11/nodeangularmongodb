@@ -1,0 +1,35 @@
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <app-header></app-header>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <app-sidebar></app-sidebar>
+   
+      <!-- partial -->
+      <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-md-6 grid-margin stretch-card" *ngFor="let friendsContest of friendContestData">
+                        <div class="card">
+                            <div class="card-body">
+                            <h4 class="card-title">{{friendsContest.title}}</h4>
+                            <p class="card-description">{{friendsContest.description}} </p>
+                            <div class="template-demo">
+                                    <img src="http://localhost:3000/images/{{friendsContest.image}}"  height="70" width="70">
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>  
+            </div>            
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <app-footer></app-footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
